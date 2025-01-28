@@ -22,7 +22,8 @@ const AboutPage = () => {
         <div>
             <h2 className='text-3xl'>About</h2>
             <Link href='/about/address'>Address Page</Link>
-            <button className='' type='button' onClick={handleNavigation}>Address</button>
+
+            <button className='block' type='button' onClick={handleNavigation}>Conditional Address Page</button>
         </div>
     );
 };

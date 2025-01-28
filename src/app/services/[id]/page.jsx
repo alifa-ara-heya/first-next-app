@@ -1,6 +1,7 @@
-import Link from "next/link";
 
-const ServicesPage = () => {
+const ServiceDetailsPage = ({ params }) => {
+    const id = params?.id;
+
     const data = [
         {
             "id": 1,
@@ -53,28 +54,17 @@ const ServicesPage = () => {
             "service_description": "High-quality content creation for blogs, websites, and marketing campaigns."
         }
     ]
+
+    const singleData = data.find(d => d['id'] == id)
+
     return (
         <div>
-            <h2 className="text-3xl">Services</h2>
-            {/* {
-                data.map(d => {
-                    return (
-                        <div key={d.id}>
-                            <Link>
-                                <h3>{d[service_name]}</h3>
-                            </Link>
-                        </div>
-                    )
-                })
-            } */}
-            {
-                data.map(d => <h2 key={d["id"]}>
-                    <Link href={`/services/${d["id"]}`}>
-                        {d['service_name']}</Link>
-                </h2>)
-            }
+            <h2>Service Details</h2>
+            <p>ID:{id} </p>
+            <p>{singleData['service_description']}</p>
+
         </div>
     );
 };
 
-export default ServicesPage;
+export default ServiceDetailsPage;
