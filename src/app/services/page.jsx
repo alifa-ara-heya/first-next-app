@@ -56,17 +56,7 @@ const ServicesPage = () => {
     return (
         <div>
             <h2 className="text-3xl">Services</h2>
-            {/* {
-                data.map(d => {
-                    return (
-                        <div key={d.id}>
-                            <Link>
-                                <h3>{d[service_name]}</h3>
-                            </Link>
-                        </div>
-                    )
-                })
-            } */}
+
             {
                 data.map(d => <h2 key={d["id"]}>
                     <Link href={`/services/${d["id"]}`}>
