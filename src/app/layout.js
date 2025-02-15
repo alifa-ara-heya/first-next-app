@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
       >
         <NavBar />
         <main className=" flex-1">
+
           {children}
         </main>
 
